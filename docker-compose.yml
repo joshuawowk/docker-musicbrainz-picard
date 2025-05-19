@@ -8,12 +8,12 @@ services:
       - "/docker/appdata/musicbrainz-picard:/config:rw"
       - "/mnt/storage_box:/storage:rw"
     environment:
-      - USER_ID: "1003"
-      - GROUP_ID: "1004"
-      - DARK_MODE: 1
-      - SECURE_CONNECTION: 1
-      - WEB_AUTHENTICATION_USERNAME: ${WEB_AUTHENTICATION_USERNAME}
-      - WEB_AUTHENTICATION_PASSWORD: ${WEB_AUTHENTICATION_PASSWORD}
+      USER_ID: "1003"
+      GROUP_ID: "1004"
+      DARK_MODE: 1
+      SECURE_CONNECTION: 1
+      WEB_AUTHENTICATION_USERNAME: ${WEB_AUTHENTICATION_USERNAME}
+      WEB_AUTHENTICATION_PASSWORD: ${WEB_AUTHENTICATION_PASSWORD}
     networks:
       - npm_net
     # devices:
