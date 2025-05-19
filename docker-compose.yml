@@ -5,7 +5,7 @@ services:
     ports:
       - "5800:5800"
     volumes:
-      - "/docker/appdata/musicbrainz-picard:/config:rw"
+      - "/docker/musicbrainz-picard:/config:rw"
       - "/mnt/storage_box:/storage:rw"
     environment:
       USER_ID: "1003"
@@ -20,4 +20,3 @@ services:
     #   - "/dev/sr0:/dev/sr0"
 networks:
   npm_net:
-    driver: bridge
