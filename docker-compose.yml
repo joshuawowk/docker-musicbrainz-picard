@@ -2,8 +2,8 @@ version: '3'
 services:
   musicbrainz-picard:
     image: jlesage/musicbrainz-picard
-    ports:
-      - "5800:5800"
+    # ports:
+    #   - "5800:5800"
     volumes:
       - "/docker/musicbrainz-picard:/config:rw"
       - "/mnt/storage_box:/storage:rw"
@@ -20,3 +20,4 @@ services:
     #   - "/dev/sr0:/dev/sr0"
 networks:
   npm_net:
+    external: true
